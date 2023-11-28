@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Quiz from './components/Quiz'
 
 function App() {
+  const sort=()=>{
+    let array=["A","B","c","f","g","A"];
+    let result = array.sort((a,b) => { return a.localeCompare(b)});
+    console.log(result);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App mt-5">
+      <h2 className='text-center'style={{color:"#00308F"}} onClick={()=>sort()}>REACT QUIZ</h2>
+      <Quiz />
+      
     </div>
   );
 }
